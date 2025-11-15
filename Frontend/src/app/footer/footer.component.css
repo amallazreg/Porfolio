@@ -1,0 +1,15 @@
+.footer-minimal {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    padding: 1.2rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    margin-top: 0;                /* empêche l’espace vide */
+}
+
+.footer-bottom {
+    font-size: 0.95rem;
+    color: var(--text);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}

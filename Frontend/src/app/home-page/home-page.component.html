@@ -1,0 +1,54 @@
+   <app-navbar></app-navbar>
+
+<body>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting">Bonjour, je suis</div>
+                <h1>Amal Lazreg</h1>
+                <div class="hero-subtitle">Ingénieur en Téléinformatique</div>
+                <p class="hero-description">
+                    Développeuse Full Stack passionnée par les technologies web innovantes. 
+                    Spécialisée dans Angular, Node.js, .NET Core et Spring Boot. 
+                    Je transforme des idées en applications web performantes et élégantes.
+                </p>
+                <div class="hero-buttons">
+                    <a href="/projets" class="btn btn-secondary"> Mes projets</a>
+                    <a href="/contact" class="btn btn-secondary">Me contacter</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <!-- Correction du chemin de l'image -->
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQFb9tnBz_pExg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1713720254693?e=1764806400&v=beta&t=iOI3RJrHG1xFYjuN2x3_fFd4KIE079bS_nIygvXCCtM" alt="Amal Lazreg" class="profile-image" onerror="this.classList.add('error')">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-minimal">
+    <div class="footer-bottom">
+        © 2024 - Réalisé par Amal Lazreg 
+    </div>
+</footer>
+
+
+    <script>
+        // Script pour gérer les erreurs de chargement d'image
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileImage = document.querySelector('.profile-image');
+            
+            // Si l'image ne se charge pas, afficher le texte alternatif
+            profileImage.addEventListener('error', function() {
+                console.error("L'image n'a pas pu être chargée. Vérifiez le schemin: " + this.src);
+                this.classList.add('error');
+            });
+            
+            // Vérifier si l'image est déjà chargée
+            if (profileImage.complete && profileImage.naturalHeight === 0) {
+                profileImage.classList.add('error');
+            }
+        });
+    </script>
+</body>
+

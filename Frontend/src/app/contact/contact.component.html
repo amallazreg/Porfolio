@@ -1,0 +1,131 @@
+   <app-navbar></app-navbar>
+
+<section class="contact-section">
+    <div class="floating-shapes">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+    </div>
+
+    <div class="contact-container">
+        <p class="section-subtitle">RESTONS EN CONTACT</p>
+        <div class="hero-text">
+
+        <h1 >Contactez-moi</h1>
+        </div>
+        <p class="section-description">
+            Ma boîte de réception est toujours ouverte. Que vous ayez une question ou que vous souhaitiez simplement me saluer,
+             je ferai de mon mieux pour vous répondre ! N'hésitez pas à me contacter pour toute information concernant les mises à jour des projets.
+        </p>
+
+        <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>
+                        <span class="icon">📧</span>
+                        Informations de Contact
+                    </h3>
+                    <div class="contact-details">
+                        <a href="mailto:amal.lazreg@example.com" class="contact-item">
+                            <span class="item-icon">✉️</span>
+                            <span>lazregamal45&#64;gmail.com</span>
+                        </a>
+                        <a href="tel:+21612345678" class="contact-item">
+                            <span class="item-icon">📱</span>
+                            <span>+216 54 560 353</span>
+                        </a>
+                        <div class="contact-item">
+                            <span class="item-icon">📍</span>
+                            <span>Tunis, Sousse</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>
+                        <span class="icon">🌐</span>
+                        Réseaux Sociaux
+                    </h3>
+                    <div class="social-links">
+                        <a href="https://github.com/amallazreg" target="_blank" rel="noopener" class="social-link">
+                            <span class="social-icon">
+                                    <img width="50" height="50" fill="white" viewBox="0 0 24 24" src="https://pngimg.com/d/github_PNG40.png"/>
+                            </span>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/amallazreg" target="_blank" rel="noopener" class="social-link">
+                            <span class="social-icon">
+                                <span class="social-icon">
+                                    <img width="50" height="50" fill="white" viewBox="0 0 24 24" src="https://img.freepik.com/vecteurs-premium/logo-rond-linkedin-isole-fond-blanc_469489-985.jpg?semt=ais_incoming&w=740&q=80"/>
+                            </span>
+                            </span>
+                            <span>LinkedIn</span>
+                        </a>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                formControlName="name" 
+                                placeholder="Votre nom"
+                                >
+                        </div>
+                       
+                    </div>
+                    <div  class="form-row" >
+                         <div class="form-group">
+                            <label for="email">Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                formControlName="email" 
+                                placeholder="votre@email.com"
+                                >
+                        </div>
+                    </div>
+                       <div  class="form-row" >
+                         <div class="form-group">
+                            <label for="email">Téléphone</label>
+                            <input 
+                                type="text" 
+                                id="telephone" 
+                                formControlName="telephone" 
+                                placeholder="xx xxx xxx"
+                                >
+                        </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea 
+                            id="message" 
+                            formControlName="message" 
+                            placeholder="Votre message..."
+                           ></textarea>
+                    </div>
+                    <button 
+                        type="submit" 
+                        class="submit-btn" 
+                    > Envoyer
+                    </button>
+                    <div class="success-message" [class.show]="success">
+                        ✓ Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>
