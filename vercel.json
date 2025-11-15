@@ -1,6 +1,6 @@
 {
-  "buildCommand": "cd Frontend && npm install && npm run build",
-  "outputDirectory": "Frontend/dist/portfolio",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/portfolio",
   "installCommand": "npm install",
   "framework": "angular"
 }
