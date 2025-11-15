@@ -1,17 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
-private apiUrl = 'http://localhost:3000/send-email';
 
   constructor(private http: HttpClient) {}
 
   sendMessage(data: any): Observable<any> {
-    return this.http.post(this.apiUrl, data);
+    return this.http.post(`${environment.apiUrl}/send-email`, data);
+
   }
 }
