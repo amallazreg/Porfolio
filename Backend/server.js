@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 // Origines autorisées (whitelist)
 const allowedOrigins = [
   "http://localhost:4200", // ou le port que tu utilises en local
-  "https://lazreg-amal-porfolio.vercel.app" // remplace par ton URL Vercel exacte
+  "http://lazreg-amal-porfolio.vercel.app" // remplace par ton URL Vercel exacte
 ];
 
 // Configuration CORS
